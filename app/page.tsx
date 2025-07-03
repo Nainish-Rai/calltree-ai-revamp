@@ -40,7 +40,8 @@ export default function Page() {
             {/* CTA Banner */}
             <CTABanner
                 title="Ready to Scale Your Contact Center with AI Agents?"
-                description="Join forward-thinking enterprises leveraging Calltree's AI Agents to scale their customer support effortlessly. Contact our team today to experience firsthand how Calltree's AI can revolutionize your customer service operations."
+                description="Find out how Calltree can help your business build better, more human customer experiences with AI.
+"
                 buttonText="Book a Meeting"
                 buttonHref="https://calendly.com/rob-calltree/30min"
             />

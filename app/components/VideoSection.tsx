@@ -37,7 +37,7 @@ export function VideoSection({ videoSrc, className = '' }: VideoSectionProps) {
                     },
                 },
             }}
-            className={`w-full px-4 ${className}`}
+            className={`w-full  px-4 ${className}`}
         >
             <div className="w-full rounded-[2.5rem] overflow-hidden">
                 <video src={videoSrc} autoPlay loop muted className="w-full"></video>

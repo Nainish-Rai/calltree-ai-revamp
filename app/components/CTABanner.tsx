@@ -16,19 +16,25 @@ export function CTABanner({
     description,
     buttonText,
     buttonHref,
-    backgroundColor = 'bg-forest-800',
+    backgroundColor = 'bg-[#006A3A]',
     textColor = 'text-white',
 }: CTABannerProps) {
     return (
-        <div className={`w-full ${backgroundColor} py-24 pt-[116px] pb-[116px]`}>
-            <div className="max-w-7xl mx-auto px-6 text-center flex-row block">
-                <h2 className={`text-4xl md:text-5xl ${textColor} font-normal mb-6`}>{title}</h2>
-                <p className={`text-xl ${textColor} font-light max-w-4xl mx-auto mb-[52px]`}>
+        <div className={`w-full  py-32`}>
+            <div className="max-w-7xl mx-auto px-6 text-center">
+                <h2
+                    className={` text-3xl md:text-4xl lg:text-5xl  text-[#252525]  mb-6 tracking-tight leading-tight`}
+                >
+                    {title}
+                </h2>
+                <p
+                    className={`max-w-2xl text-base lg:text-lg  text-[#575757]  font-normal  mx-auto mb-12 leading-relaxed opacity-90`}
+                >
                     {description}
                 </p>
                 <a
                     href={buttonHref}
-                    className="inline-flex items-center bg-white text-forest-800 px-8 py-4 rounded-md text-lg font-medium hover:bg-forest-50 transition-colors"
+                    className="inline-flex items-center bg-green-800 text-stone-100 px-8 py-4 rounded-full hover:text-green-800 border-green-800 border text-base hover:bg-[#F4F4F2] transition-colors duration-200"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

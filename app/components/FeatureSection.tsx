@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import {
     RefreshCwIcon,
     SettingsIcon,
@@ -15,6 +15,8 @@ import {
     Users,
     TrendingUp,
 } from 'lucide-react';
+// import { TextEffect } from '@/components/ui/text-effect';
+import { textVariant } from '@/lib/anims';
 
 // Icon mapping to convert string names to actual icon components
 const iconMap = {
@@ -51,105 +53,6 @@ interface FeatureSectionProps {
     }[];
 }
 
-// Animation variants
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1,
-            delayChildren: 0.2,
-        },
-    },
-};
-
-const headerVariants = {
-    hidden: { y: 40, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 1,
-            ease: [0.25, 0.1, 0.25, 1],
-        },
-    },
-};
-
-const visualVariants = {
-    hidden: { x: -60, opacity: 0, scale: 0.95 },
-    visible: {
-        x: 0,
-        opacity: 1,
-        scale: 1,
-        transition: {
-            duration: 1.2,
-            ease: [0.25, 0.1, 0.25, 1],
-        },
-    },
-};
-
-const textVariants = {
-    hidden: { x: 60, opacity: 0 },
-    visible: {
-        x: 0,
-        opacity: 1,
-        transition: {
-            duration: 1,
-            ease: [0.25, 0.1, 0.25, 1],
-        },
-    },
-};
-
-const featureContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.2,
-            delayChildren: 0.3,
-        },
-    },
-};
-
-const featureItemVariants = {
-    hidden: { x: 100, y: 60, opacity: 0, scale: 0.9 },
-    visible: {
-        x: 0,
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        transition: {
-            duration: 1.4,
-            ease: [0.25, 0.1, 0.25, 1],
-        },
-    },
-};
-
-const hoverVariants = {
-    rest: { x: 0, y: 0, scale: 1 },
-    hover: {
-        x: 12,
-        y: -4,
-        scale: 1.02,
-        transition: {
-            duration: 0.4,
-            ease: [0.68, -0.55, 0.265, 1.55],
-        },
-    },
-};
-
-const iconHoverVariants = {
-    rest: { scale: 1, rotate: 0 },
-    hover: {
-        scale: 1.15,
-        rotate: 5,
-        transition: {
-            duration: 0.4,
-            ease: [0.68, -0.55, 0.265, 1.55],
-        },
-    },
-};
-
 export function FeatureSection({
     id,
     headline,
@@ -160,52 +63,57 @@ export function FeatureSection({
     featureGrid,
 }: FeatureSectionProps) {
     const isDark = theme === 'dark';
+    const blurVariant = {
+        hidden: { filter: 'blur(4px)' },
+        visible: { filter: 'blur(0px)' },
+    };
 
+    const blurSlideVariant = {
+        hidden: { filter: 'blur(4px)', y: 20 },
+        visible: { filter: 'blur(0px)', y: 0 },
+    };
     return (
-        <motion.section
+        <section
             id={id}
             className={`relative py-16 md:py-24 overflow-hidden ${
                 isDark ? 'bg-[#0a0a0a] text-white' : 'bg-white text-gray-900'
             }`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={containerVariants}
         >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header with CTA button */}
-                <motion.div
-                    className="flex justify-between items-start mb-16 md:mb-20"
-                    variants={containerVariants}
-                >
+                <div className="flex justify-between items-start mb-16 md:mb-20">
                     <div className="space-y-6 max-w-3xl">
                         <motion.h1
-                            className={`text-3xl  md:text-4xl lg:text-5xl  font-normal leading-tight tracking-tight ${
+                            initial="hidden"
+                            whileInView="show"
+                            variants={textVariant(0.2)}
+                            // transition={{ duration: 0.2 }}
+                            className={`text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight ${
                                 isDark ? 'text-white' : 'text-gray-900'
                             }`}
-                            variants={headerVariants}
                         >
                             {headline}
                         </motion.h1>
+
                         <motion.p
+                            initial="hidden"
+                            whileInView={'show'}
+                            variants={textVariant(0.3)}
+                            // transition={{ duration: 0.2, delay: 0.3 }}
                             className={`text-base lg:text-lg text-[#575757] leading-relaxed ${
                                 isDark ? 'text-gray-300' : 'text-gray-600'
                             }`}
-                            variants={headerVariants}
                         >
                             {description}
                         </motion.p>
                     </div>
 
-                    <motion.button
+                    <button
                         className={`hidden md:flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                             isDark
                                 ? 'border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white'
                                 : 'border-gray-300 text-gray-700 hover:border-gray-500 hover:text-gray-900'
                         }`}
-                        variants={headerVariants}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                     >
                         Our product
                         <svg
@@ -221,19 +129,17 @@ export function FeatureSection({
                                 d="M9 5l7 7-7 7"
                             />
                         </svg>
-                    </motion.button>
-                </motion.div>
+                    </button>
+                </div>
 
                 {/* Main content grid */}
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                     {/* Visual Content */}
-                    <motion.div className="relative" variants={visualVariants}>
-                        <motion.div
-                            className={`relative aspect-[4/3] rounded-3xl overflow-hidden  ${
+                    <div className="relative">
+                        <div
+                            className={`relative aspect-[4/3] rounded-3xl overflow-hidden ${
                                 isDark ? 'bg-gray-800' : 'bg-gray-50'
                             }`}
-                            // whileHover={{ scale: 1.02 }}
-                            // transition={{ duration: 0.3 }}
                         >
                             <video
                                 src={
@@ -256,34 +162,32 @@ export function FeatureSection({
                                         : 'bg-gradient-to-br from-transparent via-transparent to-gray-900/10'
                                 }`}
                             />
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
 
                     {/* Features Content */}
-                    <motion.div className="space-y-8" variants={textVariants}>
-                        <motion.div className="space-y-8" variants={featureContainerVariants}>
+                    <div className="space-y-8">
+                        <div className="space-y-8">
                             {featureGrid.map((feature, index) => {
                                 const IconComponent = iconMap[feature.icon as keyof typeof iconMap];
                                 return (
                                     <motion.div
                                         key={index}
                                         className="flex items-start gap-4 cursor-pointer group"
-                                        variants={featureItemVariants}
-                                        initial="rest"
-                                        whileHover="hover"
-                                        animate="rest"
+                                        initial={{ opacity: 0, x: 50 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
                                     >
-                                        <motion.div
+                                        <div
                                             className={`flex-shrink-0 w-6 h-6 mt-1 transition-colors duration-300 ${
                                                 isDark
                                                     ? 'text-gray-400 group-hover:text-white'
                                                     : 'text-gray-500 group-hover:text-gray-900'
                                             }`}
-                                            variants={iconHoverVariants}
                                         >
                                             {IconComponent && <IconComponent className="w-6 h-6" />}
-                                        </motion.div>
-                                        <motion.div className="space-y-2" variants={hoverVariants}>
+                                        </div>
+                                        <div className="space-y-2">
                                             <h3
                                                 className={`text-base md:text-lg font- transition-colors duration-300 ${
                                                     isDark
@@ -302,30 +206,22 @@ export function FeatureSection({
                                             >
                                                 {feature.description}
                                             </p>
-                                        </motion.div>
+                                        </div>
                                     </motion.div>
                                 );
                             })}
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Mobile CTA button */}
-                <motion.div
-                    className="flex justify-center mt-12 md:hidden"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                >
-                    <motion.button
+                <div className="flex justify-center mt-12 md:hidden">
+                    <button
                         className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                             isDark
                                 ? 'border-gray-600 text-gray-300 hover:border-gray-400 hover:text-white'
                                 : 'border-gray-300 text-gray-700 hover:border-gray-500 hover:text-gray-900'
                         }`}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                     >
                         Our product
                         <svg
@@ -341,9 +237,9 @@ export function FeatureSection({
                                 d="M9 5l7 7-7 7"
                             />
                         </svg>
-                    </motion.button>
-                </motion.div>
+                    </button>
+                </div>
             </div>
-        </motion.section>
+        </section>
     );
 }

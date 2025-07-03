@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowRightIcon } from 'lucide-react';
 export function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -55,7 +55,7 @@ export function Navigation() {
                                 size="lg"
                                 className="border-green-800 text-green-800  hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
                             >
-                                Watch Demo
+                                Watch Demo <ArrowRightIcon className="ml-2 w-5 h-5" />
                             </Button>
                         </div>
 

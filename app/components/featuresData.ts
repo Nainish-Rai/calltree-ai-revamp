@@ -75,6 +75,7 @@ export const featuresData = {
         visualContent: {
             type: 'abstract-graphic' as const,
             imageSrc: '/images/8swX.png',
+            videoSrc: '/videos/v4.mp4',
             caption: 'Enterprise-grade security infrastructure',
         },
         featureGrid: [
