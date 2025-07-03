@@ -3,8 +3,11 @@ import { Footer } from './components/Footer';
 import HeroSection from '../components/hero-section';
 import { VideoSection } from './components/VideoSection';
 import { FeatureSection } from './components/FeatureSection';
+import { ResultsSection } from './components/ResultsSection';
 import { CTABanner } from './components/CTABanner';
 import { featuresData } from './components/featuresData';
+import { resultsData } from './components/resultsData';
+import { FeatureSectionTwo } from './components/FeatureSectionTwo';
 
 export default function Page() {
     return (
@@ -33,8 +36,11 @@ export default function Page() {
             <div className="space-y-0">
                 {/* Feature Sections */}
                 <FeatureSection {...featuresData.scalable} />
-                <FeatureSection {...featuresData.onboarding} />
+                <FeatureSectionTwo {...featuresData.onboarding} />
                 <FeatureSection {...featuresData.security} />
+
+                {/* Results Section */}
+                <ResultsSection {...resultsData} />
             </div>
 
             {/* CTA Banner */}

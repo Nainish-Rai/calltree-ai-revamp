@@ -53,7 +53,7 @@ interface FeatureSectionProps {
     }[];
 }
 
-export function FeatureSection({
+export function FeatureSectionTwo({
     id,
     headline,
     description,
@@ -81,7 +81,7 @@ export function FeatureSection({
         >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Header with CTA button */}
-                <div className="flex  justify-between items-start mb-16 md:mb-20">
+                <div className="flex justify-between items-start mb-16 md:mb-20">
                     <div className="space-y-6 max-w-3xl">
                         <motion.h1
                             initial="hidden"
