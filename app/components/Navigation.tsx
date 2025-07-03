@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 export function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,7 +25,7 @@ export function Navigation() {
                 animate={{
                     y: 0,
                     backgroundColor: isScrolled
-                        ? 'rgba(255, 255, 255, 0.8)'
+                        ? 'rgba(255, 255, 255, 0.1)'
                         : 'rgba(255, 255, 255, 0)',
                 }}
                 transition={{
@@ -46,7 +48,16 @@ export function Navigation() {
                         </a>
 
                         {/* Right Side */}
-                        <div className="hidden md:flex items-center gap-4"></div>
+                        <div className="hidden md:flex items-center gap-4">
+                            {' '}
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                className="border-green-800 text-green-800  hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
+                            >
+                                Watch Demo
+                            </Button>
+                        </div>
 
                         {/* Mobile Menu Button */}
                         <div className="md:hidden">

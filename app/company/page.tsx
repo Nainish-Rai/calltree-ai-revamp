@@ -17,7 +17,7 @@ export default function AboutPage() {
                         About Calltree AI
                     </h1>
                     <p className="text-xl md:text-2xl text-forest-600 max-w-3xl mb-12 font-light">
-                        We're on a mission to transform contact center operations through
+                        We&apos;re on a mission to transform contact center operations through
                         intelligent cost optimization and data-driven insights.
                     </p>
                 </div>

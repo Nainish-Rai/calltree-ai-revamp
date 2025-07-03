@@ -1,13 +1,30 @@
-import { RotatingText } from './RotatingText';
+import { TextEffect } from '@/components/ui/text-effect';
+
 export function HeroTitle() {
     return (
-        <div className="flex flex-col items-center justify-center text-5xl md:text-7xl font-semibold mb-8 tracking-tight">
-            <div className="flex flex-col md:flex-row items-center justify-center w-full">
-                <span className="font-light md:mb-0 md:mr-[8px]">Scale your team with</span>
-            </div>
-            <span className="bg-gradient-to-r from-forest-200 via-sage-400 to-sand-400 text-transparent bg-clip-text font-normal whitespace-nowrap md:mt-2 pb-1 text-center w-full">
-                AI support agents
-            </span>
+        <div className="text-center space-y-6">
+            {/* Main Heading following Sierra design system */}
+            <TextEffect
+                preset="fade-in-blur"
+                speedSegment={0.3}
+                as="h1"
+                className="text-balance text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-[#252525]"
+            >
+                Better customer experiences.
+            </TextEffect>
+
+            {/* Subtitle */}
+            <TextEffect
+                per="line"
+                preset="fade-in-blur"
+                speedSegment={0.3}
+                delay={0.5}
+                as="p"
+                className="mx-auto max-w-2xl text-xl text-[#575757] leading-[1.6] font-normal"
+            >
+                Scale your support team with AI agents that work exactly like your best human
+                representatives.
+            </TextEffect>
         </div>
     );
 }
