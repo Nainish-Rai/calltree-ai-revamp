@@ -53,7 +53,7 @@ export default function HeroSection() {
                                 speedSegment={0.3}
                                 delay={0.5}
                                 as="p"
-                                className="mx-auto mt-6 max-w-2xl text-xl text-[#575757] leading-[1.6] mb-16"
+                                className="mx-auto mt-6 max-w-2xl text-base lg:text-xl text-[#575757] leading-[1.6] mb-16"
                             >
                                 Scale your support team with AI agents that work exactly like your
                                 best human representatives.
@@ -87,7 +87,7 @@ export default function HeroSection() {
                                     size="lg"
                                     className="border-[#E5E5E3] text-[#252525] hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
                                 >
-                                    Watch Demo
+                                    Know More
                                 </Button>
                             </AnimatedGroup>
 

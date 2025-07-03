@@ -30,27 +30,11 @@ export default function Page() {
             <VideoSection videoSrc="https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2Ff189003833c6b320256e3dddc9182f5caf157771.mp4#t=0.001" />
 
             {/* Main Content */}
-            <div className="max-w-7xl mx-auto px-6 mt-16 pb-[164px]">
+            <div className="space-y-0">
                 {/* Feature Sections */}
-                <div className="flex flex-col gap-[250px]">
-                    <div className="flex flex-col gap-[200px]">
-                        <div className="flex flex-col gap-[100px]">
-                            {/* AI Agents Feature */}
-                            <FeatureSection {...featuresData.aiAgents} />
-
-                            {/* Onboarding Feature */}
-                            <FeatureSection {...featuresData.onboarding} />
-                        </div>
-
-                        <div className="flex flex-col gap-[100px]">
-                            {/* Security Feature */}
-                            <FeatureSection {...featuresData.security} />
-
-                            {/* Scalable Coverage Feature */}
-                            <FeatureSection {...featuresData.scalable} />
-                        </div>
-                    </div>
-                </div>
+                <FeatureSection {...featuresData.scalable} />
+                <FeatureSection {...featuresData.onboarding} />
+                <FeatureSection {...featuresData.security} />
             </div>
 
             {/* CTA Banner */}
