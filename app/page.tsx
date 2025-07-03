@@ -33,7 +33,7 @@ import { AnimatedGroup } from '@/components/ui/animated-group';
 export default function Page() {
     return (
         <div className="w-full min-h-screen bg-[#F9F9F7] text-[#252525] overscroll-behavior-y-contain">
-            <Script
+            {/* <Script
                 id="reb2b-script"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
@@ -44,7 +44,7 @@ export default function Page() {
                 id="collect-data-script"
                 strategy="afterInteractive"
                 src="https://k3604p7013.execute-api.us-east-1.amazonaws.com/dev/collect-data?userId=6792b8d015d2f39360d10a4a"
-            />
+            /> */}
 
             {/* Use the new HeroSection component */}
             <HeroSection />
