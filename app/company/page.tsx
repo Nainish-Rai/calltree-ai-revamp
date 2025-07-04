@@ -9,6 +9,8 @@ import { TextEffect } from '@/components/ui/text-effect';
 import { VideoSection } from '../components/VideoSection';
 import FeaturesSectionThree from '@/components/features-6';
 import ContentSection from '@/components/content-1';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutPage() {
     return (
@@ -136,74 +138,238 @@ export default function AboutPage() {
                     viewport={{
                         once: true,
                     }}
-                    className=" mb-20"
+                    className="mb-20"
                 >
-                    <motion.h1
-                        viewport={{ once: true }}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className={`text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-gray-900`}
-                    >
-                        Meet the Founders
-                    </motion.h1>
-
-                    <div className="grid md:grid-cols-2 mt-8 gap-12">
-                        {/* Kun's Profile */}
-                        <motion.div
+                    <div className="text-center mb-20">
+                        <motion.h2
+                            viewport={{ once: true }}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }}
-                            className="space-y-6 bg-white rounded-3xl p-8 shadow-sm border border-[#E5E5E3]"
+                            className="text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-[#252525] mb-6"
                         >
-                            <div className="w-48 h-48 bg-[#F4F4F2] rounded-full mx-auto mb-4 bg-[url(/images/Kpfo.png)] bg-contain bg-center bg-no-repeat" />
+                            Meet the Founders
+                        </motion.h2>
+                        <motion.p
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="text-lg text-[#575757] max-w-2xl mx-auto leading-relaxed"
+                        >
+                            The visionaries behind Calltree AI, bringing together deep industry
+                            expertise and cutting-edge technology innovation.
+                        </motion.p>
+                    </div>
 
-                            <div className="space-y-4">
-                                <h3 className="font-medium text-[#252525] text-[28px]">Kun Qian</h3>
-                                <p className="text-lg text-[#575757] font-medium uppercase tracking-wide">
-                                    CEO & Co-founder
-                                </p>
-                                <p className="text-[#575757] leading-relaxed text-start">
-                                    Kun, co-founder and CEO of Calltree AI, previously a product
-                                    leader at AWS where he focused on contact center solutions.
-                                    During his tenure, he built and scaled multiple product lines
-                                    that achieved tens of millions in annual recurring revenue.
-                                    Drawing from deep insights into contact center operations and
-                                    analytics, Kun co-founded Calltree AI to empower organizations
-                                    with the data-driven insights they need to optimize operations
-                                    and reduce costs.
-                                </p>
+                    {/* Founders Grid */}
+                    <div className="space-y-24">
+                        {/* Kun's Profile */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.1 }}
+                            viewport={{ once: true }}
+                            className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
+                        >
+                            {/* Image Section */}
+                            <div className="relative order-2 lg:order-1">
+                                <div className="relative overflow-hidden">
+                                    {/* Main Image Container */}
+                                    <div className="aspect-[4/5] relative max-w-md bg-gradient-to-br from-[#F4F4F2] to-[#E8E8E6] rounded-2xl overflow-hidden group">
+                                        <img
+                                            src="/images/Kpfo.png"
+                                            alt="Kun Qian"
+                                            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                        {/* Subtle overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+
+                                        {/* Floating accent element */}
+                                        <div className="absolute top-6 right-6 w-3 h-3 bg-[#006A3A] rounded-full shadow-lg"></div>
+                                    </div>
+
+                                    {/* Background geometric element */}
+                                    <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#006A3A]/5 rounded-2xl -z-10"></div>
+                                </div>
+                            </div>
+
+                            {/* Content Section */}
+                            <div className="order-1 lg:order-2 space-y-8">
+                                <div className="space-y-4">
+                                    <div className="inline-block">
+                                        <span className="text-sm font-semibold text-[#006A3A] uppercase tracking-wider bg-[#006A3A]/5 px-3 py-1 rounded-full">
+                                            CEO & Co-founder
+                                        </span>
+                                    </div>
+                                    <h3 className="text-4xl lg:text-5xl font-medium text-[#252525] tracking-tight">
+                                        Kun Qian
+                                    </h3>
+                                </div>
+
+                                <div className="w-16 h-[2px] bg-[#006A3A] rounded-full"></div>
+
+                                <div className="space-y-6">
+                                    <p className="text-lg text-[#575757] leading-relaxed">
+                                        Kun, co-founder and CEO of Calltree AI, previously a product
+                                        leader at AWS where he focused on contact center solutions.
+                                        During his tenure, he built and scaled multiple product
+                                        lines that achieved tens of millions in annual recurring
+                                        revenue.
+                                    </p>
+                                    <p className="text-lg text-[#575757] leading-relaxed">
+                                        Drawing from deep insights into contact center operations
+                                        and analytics, Kun co-founded Calltree AI to empower
+                                        organizations with the data-driven insights they need to
+                                        optimize operations and reduce costs.
+                                    </p>
+                                </div>
+
+                                {/* Social Links */}
+                                <div className="flex space-x-4 pt-4">
+                                    <a
+                                        href="#"
+                                        className="group flex items-center space-x-2 text-[#575757] hover:text-[#006A3A] transition-colors"
+                                    >
+                                        <div className="w-8 h-8 flex items-center justify-center border border-[#E5E5E3] rounded-lg group-hover:border-[#006A3A] transition-colors">
+                                            <svg
+                                                className="w-4 h-4"
+                                                fill="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                            </svg>
+                                        </div>
+                                        <Link
+                                            target="_blank"
+                                            href="https://www.linkedin.com/in/qian-kun/"
+                                        >
+                                            {' '}
+                                            <span className="text-sm font-medium">
+                                                LinkedIn
+                                            </span>{' '}
+                                        </Link>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="group flex items-center space-x-2 text-[#575757] hover:text-[#006A3A] transition-colors"
+                                    >
+                                        <div className="w-8 h-8 flex items-center justify-center border border-[#E5E5E3] rounded-lg group-hover:border-[#006A3A] transition-colors">
+                                            <svg
+                                                className="w-4 h-4"
+                                                fill="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                            </svg>
+                                        </div>
+                                        <span className="text-sm font-medium">Twitter</span>
+                                    </a>
+                                </div>
                             </div>
                         </motion.div>
 
                         {/* Robertson's Profile */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="space-y-6 bg-white rounded-3xl p-8 shadow-sm border border-[#E5E5E3]"
+                            className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
                         >
-                            <div className="w-48 h-48 rounded-full mx-auto mb-4 bg-[url(/images/jZWV.png)] bg-[#F4F4F2] bg-contain bg-center bg-no-repeat" />
+                            {/* Content Section */}
+                            <div className="space-y-8">
+                                <div className="space-y-4">
+                                    <div className="inline-block">
+                                        <span className="text-sm font-semibold text-[#006A3A] uppercase tracking-wider bg-[#006A3A]/5 px-3 py-1 rounded-full">
+                                            CTO & Co-founder
+                                        </span>
+                                    </div>
+                                    <h3 className="text-4xl lg:text-5xl font-medium text-[#252525] tracking-tight">
+                                        Robertson Taylor
+                                    </h3>
+                                </div>
 
-                            <div className="space-y-4">
-                                <h3 className="font-medium text-[#252525] text-[28px]">
-                                    Robertson Taylor
-                                </h3>
-                                <p className="text-lg text-[#575757] font-medium uppercase tracking-wide">
-                                    CTO & Co-founder
-                                </p>
-                                <p className="text-[#575757] leading-relaxed text-start">
-                                    Robertson, co-founder and CTO of Calltree AI, brings a research
-                                    background in High Performance Computing (HPC) and computer
-                                    vision models. Previously at Marqo, he helped major e-commerce
-                                    companies optimize their product search capabilities using
-                                    fine-tuned multimodal embedding models. Robertson brings his
-                                    expertise in AI and scalable systems to help Calltree AI
-                                    transform contact center operations through data-driven
-                                    insights.
-                                </p>
+                                <div className="w-16 h-[2px] bg-[#006A3A] rounded-full"></div>
+
+                                <div className="space-y-6">
+                                    <p className="text-lg text-[#575757] leading-relaxed">
+                                        Robertson, co-founder and CTO of Calltree AI, brings a
+                                        research background in High Performance Computing (HPC) and
+                                        computer vision models. Previously at Marqo, he helped major
+                                        e-commerce companies optimize their product search
+                                        capabilities using fine-tuned multimodal embedding models.
+                                    </p>
+                                    <p className="text-lg text-[#575757] leading-relaxed">
+                                        Robertson brings his expertise in AI and scalable systems to
+                                        help Calltree AI transform contact center operations through
+                                        data-driven insights and cutting-edge technology solutions.
+                                    </p>
+                                </div>
+
+                                {/* Social Links */}
+                                <div className="flex space-x-4 pt-4">
+                                    <a
+                                        href="#"
+                                        className="group flex items-center space-x-2 text-[#575757] hover:text-[#006A3A] transition-colors"
+                                    >
+                                        <div className="w-8 h-8 flex items-center justify-center border border-[#E5E5E3] rounded-lg group-hover:border-[#006A3A] transition-colors">
+                                            <svg
+                                                className="w-4 h-4"
+                                                fill="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                            </svg>
+                                        </div>
+                                        <Link
+                                            target="_blank"
+                                            href="https://www.linkedin.com/in/robertsonotaylor/"
+                                        >
+                                            {' '}
+                                            <span className="text-sm font-medium">
+                                                LinkedIn
+                                            </span>{' '}
+                                        </Link>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        className="group flex items-center space-x-2 text-[#575757] hover:text-[#006A3A] transition-colors"
+                                    >
+                                        <div className="w-8 h-8 flex items-center justify-center border border-[#E5E5E3] rounded-lg group-hover:border-[#006A3A] transition-colors">
+                                            <svg
+                                                className="w-4 h-4"
+                                                fill="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                            </svg>
+                                        </div>
+                                        <span className="text-sm font-medium">Twitter</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Image Section */}
+                            <div className="relative flex justify-end">
+                                <div className="relative flex justify-between overflow-hidden">
+                                    {/* Main Image Container */}
+                                    <div className="aspect-[4/5] relative bg-gradient-to-br max-w-md from-[#F4F4F2] to-[#E8E8E6] rounded-2xl overflow-hidden group">
+                                        <img
+                                            src="/images/jZWV.png"
+                                            alt="Robertson Taylor"
+                                            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                                        />
+                                        {/* Subtle overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+
+                                        {/* Floating accent element */}
+                                        <div className="absolute top-6 left-6 w-3 h-3 bg-[#006A3A] rounded-full shadow-lg"></div>
+                                    </div>
+
+                                    {/* Background geometric element */}
+                                    <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#006A3A]/5 rounded-2xl -z-10"></div>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
@@ -319,7 +485,7 @@ export default function AboutPage() {
                     viewport={{ once: true }}
                     className="mb-[120px]"
                 >
-                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                    <div className="grid md:grid-cols-3 gap-16 items-center">
                         <div>
                             <h2 className="text-4xl text-[#252525] font-normal mb-8">
                                 Our offices
@@ -328,8 +494,6 @@ export default function AboutPage() {
                                 <p className="text-xl text-[#575757] leading-relaxed">
                                     Based in{' '}
                                     <span className="text-[#4A9B8A] font-medium">New York</span>,{' '}
-                                    <span className="text-[#4A9B8A] font-medium">Sydney</span>,{' '}
-                                    <span className="text-[#4A9B8A] font-medium">London</span>, and{' '}
                                     <span className="text-[#4A9B8A] font-medium">
                                         San Francisco
                                     </span>
@@ -339,12 +503,26 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid col-span-2 grid-cols-2 gap-4">
                             <div className="w-full h-48 bg-gradient-to-r from-[#F4F4F2] to-[#E8E8E6] rounded-2xl flex items-center justify-center">
-                                <p className="text-[#575757]">Office 1</p>
+                                <img
+                                    src="https://images.pexels.com/photos/6804603/pexels-photo-6804603.jpeg"
+                                    alt="Office 1"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    className="w-full h-full object-cover rounded-3xl"
+                                />
                             </div>
-                            <div className="w-full h-64 bg-gradient-to-r from-[#E8E8E6] to-[#F4F4F2] rounded-2xl flex items-center justify-center">
-                                <p className="text-[#575757]">Office 2</p>
+                            <div className="w-96 h-full bg-gradient-to-r from-[#E8E8E6] to-[#F4F4F2] rounded-2xl flex items-center justify-center">
+                                <img
+                                    src="https://sierra.ai/-/cdn/image?src=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fca4jck6w%2Fproduction%2F47b5505c4cf527023790646676eafe00810e6772-8256x6192.jpg%3Frect%3D169%2C0%2C8087%2C5999%26auto%3Dformat&width=1920&quality=90"
+                                    alt="Office 1"
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    className="w-full h-full rounded-3xl object-cover"
+                                />
                             </div>
                         </div>
                     </div>
@@ -419,14 +597,14 @@ export default function AboutPage() {
             </div>
 
             {/* CTA Section */}
-            <div className="w-full bg-[#252525] py-24 pt-[116px] pb-[116px]">
-                <div className="max-w-7xl mx-auto px-6 text-center flex-row block">
+            <div className="w-full rounded-[2.5rem] mx-auto max-w-7xl mb-16 bg-[#006A3A] py-24 pt-[116px] pb-[116px]">
+                <div className="max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl text-white font-normal mb-[52px]"
+                        className="text-4xl md:text-5xl text-white font-normal mb-[52px] tracking-tight"
                     >
                         See your Cost Drivers
                     </motion.h2>
@@ -438,7 +616,7 @@ export default function AboutPage() {
                     >
                         <a
                             href="https://calendly.com/rob-calltree/30min"
-                            className="inline-flex items-center bg-white text-[#252525] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#F4F4F2] transition-colors"
+                            className="inline-flex items-center bg-white text-[#006A3A] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#F4F4F2] hover:text-[#252525] transition-colors shadow-lg"
                         >
                             Book a Demo <ArrowRightIcon className="ml-2 w-5 h-5" />
                         </a>

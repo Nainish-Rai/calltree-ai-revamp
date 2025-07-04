@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowRightIcon } from 'lucide-react';
+import Link from 'next/link';
 export function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,27 +36,32 @@ export function Navigation() {
                     },
                 }}
                 style={{
-                    backdropFilter: isScrolled ? 'blur(8px)' : 'none',
-                    WebkitBackdropFilter: isScrolled ? 'blur(8px)' : 'none',
+                    backdropFilter: isScrolled ? 'blur(4px)' : 'none',
+                    WebkitBackdropFilter: isScrolled ? 'blur(4px)' : 'none',
                     borderBottom: isScrolled ? '1px solid rgba(97, 94, 76, 0.1)' : 'none',
                 }}
             >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
-                        <a href="/" className="text-2xl font-semibold text-forest-800">
-                            Calltree.ai
-                        </a>
+                        <div className=" space-x-8">
+                            <a href="/" className="text-2xl font-semibold text-forest-800">
+                                Calltree.ai
+                            </a>
+                        </div>
 
                         {/* Right Side */}
                         <div className="hidden md:flex items-center gap-4">
                             {' '}
+                            <Link href="/company" className="text-base text-forest-800 mb-1">
+                                Company
+                            </Link>
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="border-green-800 text-green-800  hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
+                                className="border-green-800 text-green-800  bg-background/90 hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
                             >
-                                Watch Demo <ArrowRightIcon className="ml-2 w-5 h-5" />
+                                Book a Demo <ArrowRightIcon className="ml-2 w-5 h-5" />
                             </Button>
                         </div>
 
@@ -99,50 +105,63 @@ export function Navigation() {
                     <motion.div
                         initial={{
                             opacity: 0,
+                            y: -20,
                         }}
                         animate={{
                             opacity: 1,
+                            y: 0,
                         }}
                         exit={{
                             opacity: 0,
+                            y: -20,
                         }}
                         transition={{
                             duration: 0.2,
                         }}
-                        className="fixed inset-0 bg-white/95 backdrop-blur-sm z-40"
+                        className="fixed top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-forest-100 shadow-lg z-40"
                     >
-                        <div className="flex flex-col items-center justify-center h-full space-y-8 px-6">
-                            <a
-                                href="#"
-                                className="text-forest-600 hover:text-forest-800 transition-colors text-xl"
-                            >
-                                Products
-                            </a>
-                            <a
-                                href="#"
-                                className="text-forest-600 hover:text-forest-800 transition-colors text-xl"
-                            >
-                                Enterprise
-                            </a>
-                            <a
-                                href="#"
-                                className="text-forest-600 hover:text-forest-800 transition-colors text-xl"
-                            >
-                                Government
-                            </a>
-                            <a
-                                href="#"
-                                className="text-forest-600 hover:text-forest-800 transition-colors text-xl"
-                            >
-                                Resources
-                            </a>
-                            <div className="pt-8 flex flex-col gap-4 w-full max-w-[280px]">
-                                <button className="w-full text-forest-600 hover:text-forest-800 transition-colors text-xl px-6 py-4 rounded-md border border-forest-200 hover:border-forest-300">
-                                    Log In
+                        <div className="px-6 py-6">
+                            {/* Close button */}
+                            {/* <div className="flex justify-end mb-4">
+                                <button
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="text-forest-600 hover:text-forest-800 transition-colors p-2 rounded-full hover:bg-forest-50"
+                                >
+                                    <svg
+                                        className="h-5 w-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
                                 </button>
-                                <button className="w-full bg-forest-300 text-white px-6 py-4 rounded-md text-xl font-medium hover:bg-forest-400 transition-colors">
-                                    Book a Demo
-                                </button>
+                            </div> */}
+
+                            {/* Menu content */}
+                            <div className="space-y-6">
+                                <a
+                                    href="/company"
+                                    className="block text-forest-600 hover:text-forest-800 transition-colors text-lg font-medium py-2"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Company
+                                </a>
+                                <div className="pt-4">
+                                    <Button
+                                        variant="outline"
+                                        size="lg"
+                                        className="w-full border-forest-300 text-forest-700 hover:bg-forest-50 hover:border-forest-400 px-6 py-3 rounded-full text-base font-medium transition-colors"
+                                    >
+                                        Book a Demo
+                                        <ArrowRightIcon className="ml-2 w-4 h-4" />
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
