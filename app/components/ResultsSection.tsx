@@ -31,14 +31,15 @@ export function ResultsSection({
 }: ResultsSectionProps) {
     return (
         <section className="relative py-16 md:py-24 overflow-hidden bg-white">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="w-full mx-auto px-6 lg:px-8">
                 {/* Header */}
-                <div className="flex justify-between items-start mb-16 md:mb-20">
+                <div className="flex max-w-7xl mx-auto justify-between items-start mb-16 md:mb-20">
                     <div className="space-y-6 max-w-3xl">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
+                            viewport={{ once: true }}
                             className="text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-gray-900"
                         >
                             {headline}
@@ -47,6 +48,7 @@ export function ResultsSection({
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                             className="text-base lg:text-lg text-[#575757] leading-relaxed"
                         >
@@ -73,25 +75,26 @@ export function ResultsSection({
                 </div>
 
                 {/* Customer Results Grid */}
-                <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <div className="grid md:grid-cols-3 gap-8 lg:gap-5">
                     {customerResults.map((result, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
+                            viewport={{ once: true }}
                             className="group cursor-pointer"
                         >
                             {/* Customer Card */}
-                            <div className="relative  h-72 rounded-3xl overflow-hidden bg-gray-900 mb-6">
+                            <div className="relative  aspect-square rounded-3xl overflow-hidden bg-gray-900 mb-6">
                                 {/* Brand Logo */}
-                                <div className="absolute  inset-0 flex items-center justify-center">
+                                <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
                                     <Image
                                         src={result.logo}
                                         alt={result.logoAlt}
                                         width={400}
                                         height={400}
-                                        className="w-full  h-full object-cover"
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
                                 </div>
 
@@ -109,7 +112,7 @@ export function ResultsSection({
 
                             {/* Description */}
                             <div className="space-y-2">
-                                <p className="text-base md:text-lg text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
+                                <p className="text-base md:text-base pr-8 text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                                     {result.description}
                                 </p>
                             </div>

@@ -16,7 +16,7 @@ export const resultsData = {
             statChange: '',
         },
         {
-            logo: 'https://images.pexels.com/photos/7681839/pexels-photo-7681839.jpeg',
+            logo: 'https://images.pexels.com/photos/7658381/pexels-photo-7658381.jpeg',
             logoAlt: 'SiriusXM Logo',
             metric: 'Subscribers',
             metricValue: '34 Million',

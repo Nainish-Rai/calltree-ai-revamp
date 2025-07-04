@@ -84,10 +84,10 @@ export function FeatureSection({
                 <div className="flex  justify-between items-start mb-16 md:mb-20">
                     <div className="space-y-6 max-w-3xl">
                         <motion.h1
-                            initial="hidden"
-                            whileInView="show"
-                            variants={textVariant(0.2)}
-                            // transition={{ duration: 0.2 }}
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
                             className={`text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight ${
                                 isDark ? 'text-white' : 'text-gray-900'
                             }`}
@@ -96,10 +96,10 @@ export function FeatureSection({
                         </motion.h1>
 
                         <motion.p
-                            initial="hidden"
-                            whileInView={'show'}
-                            variants={textVariant(0.3)}
-                            // transition={{ duration: 0.2, delay: 0.3 }}
+                            viewport={{ once: true }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
                             className={`text-base lg:text-lg text-[#575757] leading-relaxed ${
                                 isDark ? 'text-gray-300' : 'text-gray-600'
                             }`}
@@ -174,7 +174,8 @@ export function FeatureSection({
                                     <motion.div
                                         key={index}
                                         className="flex items-start gap-4 cursor-pointer group"
-                                        initial={{ opacity: 0, x: 50 }}
+                                        viewport={{ once: true }}
+                                        initial={{ opacity: 0, x: 0 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
                                     >

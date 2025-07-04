@@ -8,6 +8,9 @@ import { CTABanner } from './components/CTABanner';
 import { featuresData } from './components/featuresData';
 import { resultsData } from './components/resultsData';
 import { FeatureSectionTwo } from './components/FeatureSectionTwo';
+import FeaturesSectionThree from '@/components/features-6';
+import { GeminiEffect } from '@/components/ui/gemini-effect';
+import { GoogleGeminiEffectDemo } from '@/components/GeminiComponent';
 
 export default function Page() {
     return (
@@ -30,19 +33,25 @@ export default function Page() {
             <HeroSection />
 
             {/* Video Section */}
-            <VideoSection videoSrc="https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2Ff189003833c6b320256e3dddc9182f5caf157771.mp4#t=0.001" />
+            <div className="bg-white">
+                <VideoSection videoSrc="https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2Ff189003833c6b320256e3dddc9182f5caf157771.mp4#t=0.001" />
+            </div>
 
             {/* Main Content */}
             <div className="space-y-0">
                 {/* Feature Sections */}
                 <FeatureSection {...featuresData.scalable} />
-                <FeatureSectionTwo {...featuresData.onboarding} />
+                <FeatureSection {...featuresData.onboarding} />
+                <div className="bg-white">
+                    <FeaturesSectionThree />
+                </div>
+
                 <FeatureSection {...featuresData.security} />
 
                 {/* Results Section */}
                 <ResultsSection {...resultsData} />
             </div>
-
+            <GoogleGeminiEffectDemo />
             {/* CTA Banner */}
             <CTABanner
                 title="Ready to Scale Your Contact Center with AI Agents?"
