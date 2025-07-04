@@ -6,15 +6,15 @@ export default function ContentSection() {
     return (
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-16">
-                <motion.h1
-                    viewport={{ once: true }}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
+                <h1
+                    // viewport={{ once: true }}
+                    // initial={{ opacity: 0 }}
+                    // whileInView={{ opacity: 1 }}
+                    // transition={{ duration: 0.5, delay: 0.1 }}
                     className="text-3xl md:text-4xl lg:text-5xl font-normal  leading-tight tracking-tight text-grey-900"
                 >
                     Our Story and Mission
-                </motion.h1>
+                </h1>
                 <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
                     <div className="relative mb-6 sm:mb-0">
                         <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
@@ -31,11 +31,11 @@ export default function ContentSection() {
                     </div>
 
                     <div className="relative space-y-4">
-                        <motion.p
-                            viewport={{ once: true }}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                        <p
+                            // viewport={{ once: true }}
+                            // initial={{ opacity: 0 }}
+                            // whileInView={{ opacity: 1 }}
+                            // transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-muted-foreground"
                         >
                             Founded in 2025, Calltree AI emerged from a simple observation: contact
@@ -48,7 +48,7 @@ export default function ContentSection() {
                             We believe that every interaction in a contact center represents an
                             opportunity for optimization. By providing deep insights into
                             operational costs and workflow efficiency.
-                        </motion.p>
+                        </p>
 
                         <div className="pt-6">
                             <blockquote className="border-l-4 pl-4">

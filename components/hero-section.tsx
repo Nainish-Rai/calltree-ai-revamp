@@ -37,30 +37,32 @@ export default function HeroSection() {
                     <div className="relative mx-auto max-w-6xl px-6">
                         <div className="relative z-10 mx-auto max-w-4xl text-center">
                             {/* Main Heading */}
-                            <TextEffect
+                            {/* <TextEffect
                                 preset="fade-in-blur"
                                 speedSegment={0.3}
                                 as="h1"
-                                className="text-balance text-4xl md:text-5xl lg:text-6xl   tracking-tight leading-[1.1] text-[#252525] mb-8"
-                            >
-                                Better customer experiences.
-                            </TextEffect>
 
+                            > */}
+                            <h1 className="text-balance text-4xl md:text-5xl lg:text-6xl   tracking-tight leading-[1.1] text-[#252525] mb-8">
+                                Better customer experiences.
+                            </h1>
+                            {/* </TextEffect> */}
                             {/* Subtitle */}
-                            <TextEffect
+                            {/* <TextEffect
                                 per="line"
                                 preset="fade-in-blur"
                                 speedSegment={0.3}
                                 delay={0.5}
                                 as="p"
                                 className="mx-auto mt-6 max-w-2xl text-base lg:text-xl text-[#575757] leading-[1.6] mb-16"
-                            >
+                            > */}
+                            <p className="mx-auto mt-6 max-w-2xl text-base lg:text-xl text-[#575757] leading-[1.6] mb-16">
                                 Scale your support team with AI agents that work exactly like your
                                 best human representatives.
-                            </TextEffect>
-
+                            </p>
+                            {/* </TextEffect> */}
                             {/* CTA Buttons */}
-                            <AnimatedGroup
+                            {/* <AnimatedGroup
                                 variants={{
                                     container: {
                                         visible: {
@@ -71,12 +73,11 @@ export default function HeroSection() {
                                         },
                                     },
                                     ...transitionVariants,
-                                }}
-                                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24"
-                            >
+                                }} */}
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-24">
                                 <Button
                                     size="lg"
-                                    className="bg-[#006A3A] hover:bg-[#005530] text-white px-8 py-4 rounded-full text-base font-medium transition-colors"
+                                    className="bg-[#d42638] hover:bg-[#c70a1d] text-white px-8 py-4 rounded-full text-base font-medium transition-colors"
                                 >
                                     Get Started
                                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -89,8 +90,8 @@ export default function HeroSection() {
                                 >
                                     Know More
                                 </Button>
-                            </AnimatedGroup>
-
+                            </div>{' '}
+                            {/* Closing AnimatedGroup */}
                             {/* Interactive Demo Section */}
                         </div>
                     </div>

@@ -51,7 +51,7 @@ export default function Page() {
                 {/* Results Section */}
                 <ResultsSection {...resultsData} />
             </div>
-            <GoogleGeminiEffectDemo />
+            {/* <GoogleGeminiEffectDemo /> */}
             {/* CTA Banner */}
             <CTABanner
                 title="Ready to Scale Your Contact Center with AI Agents?"

@@ -45,8 +45,18 @@ export function Navigation() {
                     <div className="flex items-center justify-between h-16">
                         {/* Logo */}
                         <div className=" space-x-8">
-                            <a href="/" className="text-2xl font-semibold text-forest-800">
-                                Calltree.ai
+                            <a
+                                href="/"
+                                className="text-xl font-medium flex gap-4 items-center  text-forest-800"
+                            >
+                                <Image
+                                    src="/images/logo.svg"
+                                    alt="Logo"
+                                    width={40}
+                                    height={40}
+                                    className="rounded-md bg-[#d42638] p-1"
+                                />
+                                Calltree
                             </a>
                         </div>
 
@@ -59,7 +69,7 @@ export function Navigation() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                className="border-green-800 text-green-800  bg-background/90 hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
+                                className="border-[#d42638] text-[#d42638] bg-background/90 hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
                             >
                                 Book a Demo <ArrowRightIcon className="ml-2 w-5 h-5" />
                             </Button>

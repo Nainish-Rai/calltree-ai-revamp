@@ -35,25 +35,25 @@ export function ResultsSection({
                 {/* Header */}
                 <div className="flex max-w-7xl mx-auto justify-between items-start mb-16 md:mb-20">
                     <div className="space-y-6 max-w-3xl">
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            viewport={{ once: true }}
+                        <h1
+                            // initial={{ opacity: 0, y: 20 }}
+                            // whileInView={{ opacity: 1, y: 0 }}
+                            // transition={{ duration: 0.6, delay: 0.2 }}
+                            // viewport={{ once: true }}
                             className="text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight text-gray-900"
                         >
                             {headline}
-                        </motion.h1>
+                        </h1>
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                        <p
+                            // initial={{ opacity: 0, y: 20 }}
+                            // whileInView={{ opacity: 1, y: 0 }}
+                            // viewport={{ once: true }}
+                            // transition={{ duration: 0.6, delay: 0.3 }}
                             className="text-base lg:text-lg text-[#575757] leading-relaxed"
                         >
                             {description}
-                        </motion.p>
+                        </p>
                     </div>
 
                     <button className="hidden md:flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:border-gray-500 hover:text-gray-900 transition-all duration-300">
@@ -77,12 +77,12 @@ export function ResultsSection({
                 {/* Customer Results Grid */}
                 <div className="grid md:grid-cols-3 gap-8 lg:gap-5">
                     {customerResults.map((result, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            viewport={{ once: true }}
+                            // initial={{ opacity: 0, y: 50 }}
+                            // whileInView={{ opacity: 1, y: 0 }}
+                            // transition={{ duration: 0.6, delay: index * 0.1 }}
+                            // viewport={{ once: true }}
                             className="group cursor-pointer"
                         >
                             {/* Customer Card */}
@@ -116,7 +116,7 @@ export function ResultsSection({
                                     {result.description}
                                 </p>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 

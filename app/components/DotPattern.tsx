@@ -19,15 +19,15 @@ export function DotPattern() {
 
         // Colors array (using Tailwind config colors)
         const colors = [
-            '#2a593f',
+            '#E26E7A',
             // forest-700
-            '#436552',
+            '#d42638',
             // forest-500
-            '#77735c',
+            'DB4A59',
             // sand-800
             '#e0d4be',
             // sand-300
-            '#689e80', // forest-200
+            '#DB4655', // forest-200
         ];
 
         // Draw static dots

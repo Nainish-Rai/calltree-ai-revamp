@@ -83,29 +83,29 @@ export function FeatureSection({
                 {/* Header with CTA button */}
                 <div className="flex  justify-between items-start mb-16 md:mb-20">
                     <div className="space-y-6 max-w-3xl">
-                        <motion.h1
-                            viewport={{ once: true }}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
+                        <h1
+                            // viewport={{ once: true }}
+                            // initial={{ opacity: 0 }}
+                            // whileInView={{ opacity: 1 }}
+                            // transition={{ duration: 0.5, delay: 0.1 }}
                             className={`text-3xl md:text-4xl lg:text-5xl font-normal leading-tight tracking-tight ${
                                 isDark ? 'text-white' : 'text-gray-900'
                             }`}
                         >
                             {headline}
-                        </motion.h1>
+                        </h1>
 
-                        <motion.p
-                            viewport={{ once: true }}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
+                        <p
+                            // viewport={{ once: true }}
+                            // initial={{ opacity: 0 }}
+                            // whileInView={{ opacity: 1 }}
+                            // transition={{ duration: 0.5, delay: 0.2 }}
                             className={`text-base lg:text-lg text-[#575757] leading-relaxed ${
                                 isDark ? 'text-gray-300' : 'text-gray-600'
                             }`}
                         >
                             {description}
-                        </motion.p>
+                        </p>
                     </div>
 
                     <button
@@ -171,13 +171,13 @@ export function FeatureSection({
                             {featureGrid.map((feature, index) => {
                                 const IconComponent = iconMap[feature.icon as keyof typeof iconMap];
                                 return (
-                                    <motion.div
+                                    <div
                                         key={index}
                                         className="flex items-start gap-4 cursor-pointer group"
-                                        viewport={{ once: true }}
-                                        initial={{ opacity: 0, x: 0 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        // viewport={{ once: true }}
+                                        // initial={{ opacity: 0, x: 0 }}
+                                        // whileInView={{ opacity: 1, x: 0 }}
+                                        // transition={{ duration: 0.5, delay: index * 0.1 }}
                                     >
                                         <div
                                             className={`flex-shrink-0 w-6 h-6 mt-1 transition-colors duration-300 ${
@@ -208,7 +208,7 @@ export function FeatureSection({
                                                 {feature.description}
                                             </p>
                                         </div>
-                                    </motion.div>
+                                    </div>
                                 );
                             })}
                         </div>

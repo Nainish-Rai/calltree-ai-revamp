@@ -8,30 +8,30 @@ The design aesthetic is modern, clean, and trustworthy. It projects a sense of c
 **Color Palette:**
 The palette is minimal and sophisticated.
 
--   **Background:** The primary background is a very light, warm off-white (`#F9F9F7`), creating a soft, airy feel.
--   **Surfaces:** Cards and distinct UI panels use a slightly more defined off-white (`#F4F4F2`) to create subtle depth and separation.
--   **Dark Mode:** A contrasting dark theme uses a deep charcoal color (`#1C1C1C`) for backgrounds, with white text, providing a premium, focused experience in sections like "Safe and secure."
--   **Text:** The main text color is a dark, readable charcoal (`#252525`) instead of a stark black. Subtitles and less prominent text use a softer gray.
--   **Primary Accent:** The brand's identity is carried by a deep, rich forest green (`#006A3A`). This color is used strategically for primary buttons, links, and key brand moments to signify action, trust, and growth.
+- **Background:** The primary background is a very light, warm off-white (`#F9F9F7`), creating a soft, airy feel.
+- **Surfaces:** Cards and distinct UI panels use a slightly more defined off-white (`#F4F4F2`) to create subtle depth and separation.
+- **Dark Mode:** A contrasting dark theme uses a deep charcoal color (`#1C1C1C`) for backgrounds, with white text, providing a premium, focused experience in sections like "Safe and secure."
+- **Text:** The main text color is a dark, readable charcoal (`#252525`) instead of a stark black. Subtitles and less prominent text use a softer gray.
+- **Primary Accent:** The brand's identity is carried by a deep, rich forest green (`#d42638`). This color is used strategically for primary buttons, links, and key brand moments to signify action, trust, and growth.
 
 **Typography:**
 A single, clean, geometric sans-serif font family (similar to Inter or Circular) is used throughout to maintain consistency and readability.
 
--   **Headings:** Headings are large, impactful, and set in a bold weight. They have a slightly tight letter spacing (`tracking-tight`) for a polished, modern look. The main hero heading is especially prominent.
--   **Body Copy:** Paragraph text is set at a comfortable, readable size with a regular font weight and generous line height, ensuring long-form content is easy to digest.
--   **Hierarchy:** A clear typographic scale distinguishes between main headings, section titles, body text, and smaller captions or labels.
+- **Headings:** Headings are large, impactful, and set in a bold weight. They have a slightly tight letter spacing (`tracking-tight`) for a polished, modern look. The main hero heading is especially prominent.
+- **Body Copy:** Paragraph text is set at a comfortable, readable size with a regular font weight and generous line height, ensuring long-form content is easy to digest.
+- **Hierarchy:** A clear typographic scale distinguishes between main headings, section titles, body text, and smaller captions or labels.
 
 **Layout & Spacing:**
 The layout is built on a foundation of generous whitespace and a consistent spacing scale.
 
--   **Grid:** Content is organized within a centered, max-width container to maintain focus and readability on wider screens. Multi-column grids (two, three, and four columns) are used to present features, customer stories, and footer links in an orderly fashion.
--   **Spacing:** Consistent and ample padding is applied to all sections and within components like cards and buttons, preventing any sense of clutter.
+- **Grid:** Content is organized within a centered, max-width container to maintain focus and readability on wider screens. Multi-column grids (two, three, and four columns) are used to present features, customer stories, and footer links in an orderly fashion.
+- **Spacing:** Consistent and ample padding is applied to all sections and within components like cards and buttons, preventing any sense of clutter.
 
 **Components & Interactivity:**
 
--   **Buttons:** Buttons are a key interactive element. The primary style is a solid green fill with white text for high-priority actions ("Learn More"). The secondary style is an outlined button with a green border and text, used for top-level navigation ("Get Started") and less-urgent calls-to-action. Both feature fully rounded corners on one side and less on the other or a pill-shape, giving them a distinct, modern feel.
--   **Cards:** Cards are used to segment information. They have soft, rounded corners, a subtle background color difference, and sometimes a very faint border or shadow to lift them from the page.
--   **Interactive Demos:** The large, pill-shaped chat prompt ("Can you help me find a room with a view?") is a central visual motif, immediately communicating the product's conversational nature. It's clean, with a light border and an iconic "send" arrow.
+- **Buttons:** Buttons are a key interactive element. The primary style is a solid green fill with white text for high-priority actions ("Learn More"). The secondary style is an outlined button with a green border and text, used for top-level navigation ("Get Started") and less-urgent calls-to-action. Both feature fully rounded corners on one side and less on the other or a pill-shape, giving them a distinct, modern feel.
+- **Cards:** Cards are used to segment information. They have soft, rounded corners, a subtle background color difference, and sometimes a very faint border or shadow to lift them from the page.
+- **Interactive Demos:** The large, pill-shaped chat prompt ("Can you help me find a room with a view?") is a central visual motif, immediately communicating the product's conversational nature. It's clean, with a light border and an iconic "send" arrow.
 
 ---
 
@@ -46,13 +46,13 @@ The layout is built on a foundation of generous whitespace and a consistent spac
         "background": "#F9F9F7",
         "surface": "#F4F4F2",
         "background-dark": "#1C1C1C",
-        "primary": "#006A3A",
+        "primary": "#d42638",
         "border": "#E5E5E3",
         "text": {
             "primary": "#252525",
             "secondary": "#575757",
             "inverse": "#FFFFFF",
-            "primary-accent": "#006A3A"
+            "primary-accent": "#d42638"
         }
     },
     "typography": {
