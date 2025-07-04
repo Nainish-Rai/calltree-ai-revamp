@@ -20,7 +20,7 @@ export function CTABanner({
     textColor = 'text-white',
 }: CTABannerProps) {
     return (
-        <div className={`w-full  py-8 pb-32`}>
+        <div className={`w-full  py-8 pb-32 bg-transparent`}>
             <div className="max-w-7xl mx-auto px-6 text-center">
                 {/* <h2
                     className={` text-3xl md:text-4xl lg:text-5xl  text-[#252525]  mb-6 tracking-tight leading-tight`}
