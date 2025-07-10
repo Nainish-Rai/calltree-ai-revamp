@@ -13,19 +13,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'refresh-cw',
+                icon: 'RotateCcw',
                 title: 'Instant Resolutions',
                 description:
                     'Solve issues on the first contact, eliminating tedious IVR menus and long wait times.',
             },
             {
-                icon: 'settings',
+                icon: 'Settings',
                 title: 'Elastic Support',
                 description:
                     'Effortlessly handle fluctuations in call volume without hiring or scheduling additional resources.',
             },
             {
-                icon: 'user-check',
+                icon: 'UserCheck',
                 title: 'Consistent Quality',
                 description:
                     'Maintain high service standards even during unexpected demand spikes.',
@@ -46,19 +46,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'bar-chart-2',
+                icon: 'BarChart2',
                 title: 'Instant Ramp-Up',
                 description:
                     'AI agents learn by observing your human reps, quickly adapting to your processes and workflows.',
             },
             {
-                icon: 'clock',
+                icon: 'Clock',
                 title: 'Seamless Human Handoff',
                 description:
                     'If a conversation requires human intervention, Calltree automatically transfers it—providing full context.',
             },
             {
-                icon: 'list',
+                icon: 'List',
                 title: 'Continuous Improvement',
                 description:
                     'Our AI agents continually learn from every interaction, automatically improving performance and efficiency.',
@@ -80,19 +80,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'shield',
+                icon: 'Shield',
                 title: 'Robust Guardrails',
                 description:
                     'Our AI agents strictly follow your business rules and compliance policies.',
             },
             {
-                icon: 'lock',
+                icon: 'Lock',
                 title: 'Data Protection',
                 description:
                     'Sensitive customer information remains secure, encrypted, and private.',
             },
             {
-                icon: 'user-check',
+                icon: 'UserCheck',
                 title: 'Consistent and On-Brand',
                 description:
                     'Our AI agents reliably represent your brand, providing only approved, accurate information.',
@@ -111,19 +111,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'shield',
+                icon: 'Shield',
                 title: 'Robust Guardrails',
                 description:
                     'Our AI agents strictly follow your business rules and compliance policies.',
             },
             {
-                icon: 'lock',
+                icon: 'Lock',
                 title: 'Data Protection',
                 description:
                     'Sensitive customer information remains secure, encrypted, and private.',
             },
             {
-                icon: 'user-check',
+                icon: 'UserCheck',
                 title: 'Consistent and On-Brand',
                 description:
                     'Our AI agents reliably represent your brand, providing only approved, accurate information.',
@@ -142,19 +142,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'shield',
+                icon: 'Shield',
                 title: 'Robust Guardrails',
                 description:
                     'Our AI agents strictly follow your business rules and compliance policies.',
             },
             {
-                icon: 'lock',
+                icon: 'Lock',
                 title: 'Data Protection',
                 description:
                     'Sensitive customer information remains secure, encrypted, and private.',
             },
             {
-                icon: 'user-check',
+                icon: 'UserCheck',
                 title: 'Consistent and On-Brand',
                 description:
                     'Our AI agents reliably represent your brand, providing only approved, accurate information.',
@@ -176,19 +176,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'heart',
+                icon: 'Heart',
                 title: 'Empathetic Responses',
                 description:
                     'AI agents understand customer emotions and respond with appropriate empathy and care.',
             },
             {
-                icon: 'clock',
+                icon: 'Clock',
                 title: '24/7 Availability',
                 description:
                     'Provide round-the-clock support without compromising on quality or response time.',
             },
             {
-                icon: 'users',
+                icon: 'Users',
                 title: 'Personalized Service',
                 description:
                     'Tailor interactions based on customer history, preferences, and behavior patterns.',
@@ -207,19 +207,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'bar-chart-2',
+                icon: 'BarChart2',
                 title: 'CSAT Tracking',
                 description:
                     'Real-time customer satisfaction monitoring with detailed sentiment analysis.',
             },
             {
-                icon: 'trending-up',
+                icon: 'TrendingUp',
                 title: 'Performance Metrics',
                 description:
                     'Track key performance indicators like resolution time, first-call resolution, and customer retention.',
             },
             {
-                icon: 'alert-circle',
+                icon: 'AlertCircle',
                 title: 'Issue Prevention',
                 description:
                     'Identify common issues before they escalate and implement proactive solutions.',
@@ -242,19 +242,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'cpu',
+                icon: 'Cpu',
                 title: 'System Analysis',
                 description:
                     'Automatically analyze system logs, configurations, and performance metrics.',
             },
             {
-                icon: 'tool',
+                icon: 'Wrench',
                 title: 'Automated Troubleshooting',
                 description:
                     'Guide customers through step-by-step solutions based on diagnostic results.',
             },
             {
-                icon: 'book',
+                icon: 'Book',
                 title: 'Knowledge Base Integration',
                 description:
                     'Access comprehensive technical documentation and solution databases instantly.',
@@ -273,19 +273,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'arrow-up-right',
+                icon: 'ArrowUpRight',
                 title: 'Smart Routing',
                 description:
                     'Automatically route issues to specialists based on complexity and expertise required.',
             },
             {
-                icon: 'file-text',
+                icon: 'FileText',
                 title: 'Context Preservation',
                 description:
                     'Maintain complete interaction history and diagnostic data during escalation.',
             },
             {
-                icon: 'clock',
+                icon: 'Clock',
                 title: 'SLA Management',
                 description:
                     'Monitor and ensure compliance with service level agreements and response times.',
@@ -307,19 +307,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'target',
+                icon: 'Target',
                 title: 'Smart Recommendations',
                 description:
                     'AI-powered product recommendations based on customer behavior and purchase history.',
             },
             {
-                icon: 'dollar-sign',
+                icon: 'DollarSign',
                 title: 'Upsell Automation',
                 description:
                     'Automatically identify and present relevant upgrade opportunities at the right moment.',
             },
             {
-                icon: 'shopping-cart',
+                icon: 'ShoppingCart',
                 title: 'Cross-sell Intelligence',
                 description:
                     'Suggest complementary products and services that enhance customer value.',
@@ -338,19 +338,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'trending-up',
+                icon: 'TrendingUp',
                 title: 'Revenue Tracking',
                 description:
                     'Monitor revenue per interaction, conversion rates, and average deal size.',
             },
             {
-                icon: 'pie-chart',
+                icon: 'PieChart',
                 title: 'Customer Lifetime Value',
                 description:
                     'Calculate and optimize customer lifetime value through strategic interactions.',
             },
             {
-                icon: 'bar-chart-3',
+                icon: 'BarChart3',
                 title: 'Performance Benchmarking',
                 description:
                     'Compare revenue performance against industry standards and historical data.',
@@ -372,19 +372,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'activity',
+                icon: 'Activity',
                 title: 'Workflow Analysis',
                 description:
                     'Analyze customer journey patterns and identify bottlenecks in your processes.',
             },
             {
-                icon: 'eye',
+                icon: 'Eye',
                 title: 'Predictive Analytics',
                 description:
                     'Forecast customer behavior and business trends using advanced machine learning.',
             },
             {
-                icon: 'lightbulb',
+                icon: 'Lightbulb',
                 title: 'Strategic Recommendations',
                 description:
                     'Receive AI-generated recommendations for process improvements and optimization.',
@@ -403,19 +403,19 @@ export const featuresData = {
         },
         featureGrid: [
             {
-                icon: 'settings',
+                icon: 'Settings',
                 title: 'Process Automation',
                 description:
                     'Identify and implement automation opportunities to streamline operations.',
             },
             {
-                icon: 'minimize-2',
+                icon: 'Minimize2',
                 title: 'Cost Reduction',
                 description:
                     'Pinpoint inefficiencies and implement cost-saving measures across your organization.',
             },
             {
-                icon: 'zap',
+                icon: 'Zap',
                 title: 'Performance Optimization',
                 description:
                     'Continuously monitor and optimize key performance indicators for maximum efficiency.',
