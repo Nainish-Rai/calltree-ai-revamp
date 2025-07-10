@@ -34,7 +34,7 @@ export default function Page() {
 
             {/* Video Section */}
             <div className="bg-white">
-                <VideoSection videoSrc="https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2Ff189003833c6b320256e3dddc9182f5caf157771.mp4#t=0.001" />
+                <VideoSection videoSrc="https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2F54245612312d62a448dfa5e0fa5458818924d659.mp4#t=0.001" />
             </div>
 
             {/* Main Content */}

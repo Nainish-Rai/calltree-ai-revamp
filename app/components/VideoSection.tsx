@@ -15,7 +15,7 @@ export function VideoSection({ videoSrc, className = '' }: VideoSectionProps) {
                     visible: {
                         transition: {
                             staggerChildren: 0.05,
-                            delayChildren: 1.0,
+                            delayChildren: 0.5,
                         },
                     },
                 },
