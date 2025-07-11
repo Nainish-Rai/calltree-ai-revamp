@@ -113,13 +113,15 @@ export function Navigation() {
 
                         {/* Right Side */}
                         <div className="hidden md:flex items-center gap-4">
-                            <Button
-                                variant="outline"
-                                size="lg"
-                                className="border-[#d42638] text-[#d42638] bg-background/90 hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
-                            >
-                                Book a Demo <ArrowRightIcon className="ml-2 w-5 h-5" />
-                            </Button>
+                            <Link href="/learn-more">
+                                <Button
+                                    variant="outline"
+                                    size="lg"
+                                    className="border-[#d42638] text-[#d42638] bg-background/90 hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
+                                >
+                                    Book a Demo <ArrowRightIcon className="ml-2 w-5 h-5" />
+                                </Button>
+                            </Link>
                         </div>
 
                         {/* Mobile Menu Button */}

@@ -449,7 +449,7 @@ export default function AboutPage() {
                     </h2>
                     <div>
                         <a
-                            href="https://calendly.com/rob-calltree/30min"
+                            href="/learn-more"
                             className="inline-flex items-center bg-white text-[#d42638] px-8 py-4 rounded-full text-lg font-medium hover:bg-[#F4F4F2] hover:text-[#252525] transition-colors shadow-lg"
                         >
                             Book a Demo <ArrowRightIcon className="ml-2 w-5 h-5" />

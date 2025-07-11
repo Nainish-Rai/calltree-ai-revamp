@@ -58,7 +58,7 @@ export default function Page() {
                 description="Find out how Calltree can help your business build better, more human customer experiences with AI.
 "
                 buttonText="Book a Meeting"
-                buttonHref="https://calendly.com/rob-calltree/30min"
+                buttonHref="/learn-more"
             />
 
             {/* Footer */}

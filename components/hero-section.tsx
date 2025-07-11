@@ -5,6 +5,7 @@ import { TextEffect } from '@/components/ui/text-effect';
 import { AnimatedGroup } from '@/components/ui/animated-group';
 import { HeroHeader } from './header';
 import { Navigation } from '@/app/components/Navigation';
+import Link from 'next/link';
 
 export const transitionVariants = {
     item: {
@@ -82,14 +83,15 @@ export default function HeroSection() {
                                     Get Started
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Button>
-
-                                <Button
-                                    variant="outline"
-                                    size="lg"
-                                    className="border-[#E5E5E3] text-[#252525] hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
-                                >
-                                    Know More
-                                </Button>
+                                <Link className="no-underline" href={'/learn-more'}>
+                                    <Button
+                                        variant="outline"
+                                        size="lg"
+                                        className="border-[#E5E5E3] text-[#252525] hover:bg-[#F4F4F2] px-8 py-4 rounded-full text-base font-medium transition-colors"
+                                    >
+                                        Know More
+                                    </Button>
+                                </Link>
                             </div>{' '}
                             {/* Closing AnimatedGroup */}
                             {/* Interactive Demo Section */}

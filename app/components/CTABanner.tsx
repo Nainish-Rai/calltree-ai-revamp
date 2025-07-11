@@ -35,7 +35,7 @@ export function CTABanner({
                 <a
                     href={buttonHref}
                     className="inline-flex items-center bg-[#d42638] text-stone-100 px-8 py-4 rounded-full hover:text-[#d42638] border-[#d42638] border text-base hover:bg-[#F4F4F2] transition-colors duration-200"
-                    target="_blank"
+                    // target="_blank"
                     rel="noopener noreferrer"
                 >
                     {buttonText} <ArrowRightIcon className="ml-2 w-5 h-5" />
