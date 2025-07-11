@@ -29,6 +29,24 @@ export function Footer() {
                         >
                             Contact
                         </a>
+                        <a
+                            href="/privacy"
+                            className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                        >
+                            Privacy
+                        </a>
+                        <a
+                            href="/terms"
+                            className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                        >
+                            Terms
+                        </a>
+                        <a
+                            href="/cookies"
+                            className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                        >
+                            Cookies
+                        </a>
                     </div>
                     <div className="text-sm text-gray-600">© 2025 CallTree AI</div>
                 </div>
