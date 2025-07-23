@@ -3,7 +3,6 @@ import { TextEffect } from '@/components/ui/text-effect';
 export function HeroTitle() {
     return (
         <div className="text-center space-y-6">
-            {/* Main Heading following Sierra design system */}
             <TextEffect
                 preset="fade-in-blur"
                 speedSegment={0.3}

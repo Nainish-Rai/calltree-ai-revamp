@@ -22,8 +22,7 @@ export const solutionsData: Record<string, SolutionData> = {
         id: 'customer-care',
         title: 'Customer Care',
         subtitle: 'Boost conversion and brand loyalty with your trusted AI agent.',
-        videoSrc:
-            'https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2F6dc1cdcd1115c2fad7d226cccaf1d9acce0dbfac.mp4#t=0.001',
+        videoSrc: 'https://videos.pexels.com/video-files/5527272/5527272-uhd_2560_1440_25fps.mp4',
         heroDescription:
             'Transform your customer service with AI-powered agents that understand context, resolve issues faster, and create lasting customer relationships.',
         inActionTitle: 'Boost Conversion',
@@ -42,8 +41,7 @@ export const solutionsData: Record<string, SolutionData> = {
         id: 'technical-support',
         title: 'Technical Support',
         subtitle: 'Resolve complex technical issues with intelligent AI-powered support.',
-        videoSrc:
-            'https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2F6dc1cdcd1115c2fad7d226cccaf1d9acce0dbfac.mp4#t=0.001',
+        videoSrc: 'https://videos.pexels.com/video-files/7592012/7592012-hd_1920_1080_25fps.mp4',
         heroDescription:
             'Empower your technical support team with AI agents that can diagnose issues, provide step-by-step solutions, and escalate complex problems intelligently.',
         inActionTitle: 'Faster Resolution',
@@ -62,8 +60,7 @@ export const solutionsData: Record<string, SolutionData> = {
         id: 'revenue-generation',
         title: 'Revenue Generation',
         subtitle: 'Turn every interaction into a revenue opportunity with smart AI.',
-        videoSrc:
-            'https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2F12ad68c49a353ec77f0ea6112c9e888f23de5df7.mp4#t=0.001',
+        videoSrc: 'https://videos.pexels.com/video-files/5527272/5527272-uhd_2560_1440_25fps.mp4',
         heroDescription:
             'Maximize revenue potential with AI agents that identify upsell opportunities, personalize recommendations, and guide customers through the sales funnel.',
         inActionTitle: 'Increase Revenue',
@@ -82,8 +79,7 @@ export const solutionsData: Record<string, SolutionData> = {
         id: 'consulting-analytics',
         title: 'Consulting Analytics',
         subtitle: 'Make data-driven decisions with comprehensive workflow analytics.',
-        videoSrc:
-            'https://sierra.ai/-/cdn/video?src=https%3A%2F%2Fcdn.sanity.io%2Ffiles%2Fca4jck6w%2Fproduction%2F12ad68c49a353ec77f0ea6112c9e888f23de5df7.mp4#t=0.001',
+        videoSrc: 'https://videos.pexels.com/video-files/7592012/7592012-hd_1920_1080_25fps.mp4',
         heroDescription:
             'Unlock actionable insights from your customer interactions with advanced analytics that reveal patterns, inefficiencies, and opportunities for improvement.',
         inActionTitle: 'Strategic Insights',

@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatedGroup } from '@/components/ui/animated-group';
+import BlurVignette from '@/components/ui/blur-vignette';
 
 interface VideoSectionProps {
     videoSrc: string;
@@ -39,9 +40,11 @@ export function VideoSection({ videoSrc, className = '' }: VideoSectionProps) {
             }}
             className={`w-full  bg-[#F9F9F7] rounded-b-[3rem] pb-16 mx-auto  px-4 ${className}`}
         >
-            <div className="w-full max-w-7xl mx-auto rounded-[2.5rem] overflow-hidden">
-                <video src={videoSrc} autoPlay loop muted className="w-full"></video>
-            </div>
+            <BlurVignette className="w-full max-w-7xl mx-auto rounded-[2.5rem] overflow-hidden">
+                <div className="w-full max-w-7xl mx-auto rounded-[2.5rem] overflow-hidden">
+                    <video src={videoSrc} autoPlay loop muted className="w-full"></video>
+                </div>
+            </BlurVignette>
         </AnimatedGroup>
     );
 }
