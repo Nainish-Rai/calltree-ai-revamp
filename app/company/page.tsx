@@ -385,7 +385,7 @@ export default function AboutPage() {
                             </div>
                             <div className="w-96 h-full bg-gradient-to-r from-[#E8E8E6] to-[#F4F4F2] rounded-2xl flex items-center justify-center">
                                 <img
-                                    src="https://sierra.ai/-/cdn/image?src=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fca4jck6w%2Fproduction%2F47b5505c4cf527023790646676eafe00810e6772-8256x6192.jpg%3Frect%3D169%2C0%2C8087%2C5999%26auto%3Dformat&width=1920&quality=90"
+                                    src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg"
                                     alt="Office 1"
                                     width={0}
                                     height={0}

@@ -4,12 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowRightIcon, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-import { solutionsMenuItems } from './solutionsData';
+import { solutionsMenuItems, industriesMenuItems } from './solutionsData';
 
 export function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isSolutionsDropdownOpen, setIsSolutionsDropdownOpen] = useState(false);
+    const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -93,6 +94,42 @@ export function Navigation() {
                                                 <Link
                                                     key={item.id}
                                                     href={`/solutions/${item.id}`}
+                                                    className="block px-4 py-3 text-sm text-forest-800 hover:bg-gray-50 hover:text-forest-600 transition-colors"
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+
+                            {/* Industries Dropdown */}
+                            <div
+                                className="relative"
+                                onMouseEnter={() => setIsIndustriesDropdownOpen(true)}
+                                onMouseLeave={() => setIsIndustriesDropdownOpen(false)}
+                            >
+                                <button className="flex items-center gap-2 text-base text-forest-800 hover:text-forest-600 transition-colors">
+                                    Industries
+                                    <ChevronDown
+                                        className={`w-4 h-4 transition-transform ${isIndustriesDropdownOpen ? 'rotate-180' : ''}`}
+                                    />
+                                </button>
+
+                                <AnimatePresence>
+                                    {isIndustriesDropdownOpen && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -10 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                                        >
+                                            {industriesMenuItems.map((item) => (
+                                                <Link
+                                                    key={item.id}
+                                                    href={`/industries/${item.id}`}
                                                     className="block px-4 py-3 text-sm text-forest-800 hover:bg-gray-50 hover:text-forest-600 transition-colors"
                                                 >
                                                     {item.label}
@@ -192,6 +229,25 @@ export function Navigation() {
                                             <Link
                                                 key={item.id}
                                                 href={`/solutions/${item.id}`}
+                                                className="block text-forest-600 hover:text-forest-800 transition-colors py-1"
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Mobile Industries Menu */}
+                                <div className="space-y-2">
+                                    <div className="text-forest-800 font-medium text-lg">
+                                        Industries
+                                    </div>
+                                    <div className="pl-4 space-y-2">
+                                        {industriesMenuItems.map((item) => (
+                                            <Link
+                                                key={item.id}
+                                                href={`/industries/${item.id}`}
                                                 className="block text-forest-600 hover:text-forest-800 transition-colors py-1"
                                                 onClick={() => setIsMobileMenuOpen(false)}
                                             >
